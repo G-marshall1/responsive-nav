@@ -229,6 +229,26 @@ select {
     transform: scale(1.5);
 }
 
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+font-weight: 700;
+margin-right: .5em;
+}
+
+.underline-indicators > * {
+    text-decoration: underline;
+    
+}
+
 
 
 
