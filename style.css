@@ -231,6 +231,7 @@ select {
 
 .primary-navigation {
     list-style: none;
+    --underline-grap: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -245,8 +246,25 @@ margin-right: .5em;
 }
 
 .underline-indicators > * {
-    text-decoration: underline;
-    
+    padding: var(--underline-gap, 1rem) 0;
+    cursor: pointer;
+    border: 0;
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl(var(--clr-white) / .25);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    border-color: hsl(var(--clr-white) / 1);
+    color: hsl(var(--clr-white) / 1);
+}
+
+.tab-list {
+    --gap: 2rem;
 }
 
 
