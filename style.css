@@ -231,6 +231,7 @@ select {
 
 .primary-navigation {
     list-style: none;
+    --underline-grap: 2rem;
     padding: 0;
     margin: 0;
 }
@@ -245,8 +246,63 @@ margin-right: .5em;
 }
 
 .underline-indicators > * {
-    text-decoration: underline;
-    
+    padding: var(--underline-gap, 1rem) 0;
+    cursor: pointer;
+    border: 0;
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl(var(--clr-white) / .25);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    border-color: hsl(var(--clr-white) / 1);
+    color: hsl(var(--clr-white) / 1);
+}
+
+.tab-list {
+    --gap: 2rem;
+}
+
+.dot-indicators > * {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: .5em;
+    background-color: hsl(var(--clr-white) / .25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+    background-color: hsl(var(--clr-white) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+}
+
+.number-indicators > * {
+    cursor: pointer;
+    border: 0;
+   border-radius: 50% ;
+    background-color: hsl(var(--clr-white) / .25);
+    background-color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-white));
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+    background-color: hsl(var(--clr-white) / .5);
+color: hsl(var(--clr-dark));
+}
+
+.number-indicators > .active,
+.number-indicators > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+    color: hsl(var(--clr-dark));
 }
 
 
